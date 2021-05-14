@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Movie List</title>
+</head>
+<body class="grey lighten-4">
+  <div class="container">
+    <header class="row center-align">
+      <h5>My Recommended Movies</h5>
+    </header>
+    <div class="row">
+      <form id="main" autocomplete="off">
+        <div class="row">
+          <div class="col s12">
+            <label for="movie">Movie Name </label>
+            <input placeholder="The Matrix" name="movie" type="text" class="validate">
+          </div>
+          <!---Place genre and date inputs side by side-->
+          <div class="col s6">
+            <label for="genre">Movie Genre</label>
+            <input placeholder="Sci-Fi" name="genre" type="text" class="validate">
+          </div>
+          <div class="col s6">
+            <label for="date">Release Date</label>
+            <input placeholder="yyyy-mm-dd" name="date" type="text" class="validate">
+          </div>
+        </div>
+        <button id="add" class="btn blue-grey lighten-2" type="submit" name="action">
+          Add Movie
+          <i class="material-icons right">add</i>
+        </button>
+      </form>
+    </div>
+    <div class="row">
+      <header>
+        <h5>Movies</h5>
+      </header>
+      <form id="filter" class="row">
+        <div class="col s12">
+          <label for="filter">Filter by Movie Name</label>
+          <input name="filter" type="text" class="validate">
+        </div>
+      </form>
+      <table class="row centered col s12">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Genre</th>
+            <th>Released</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+      <div class="row">
+        <button id="clear" class="btn black waves-effect waves-red">
+          Clear Movie List
+          <i class="material-icons right">clear</i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="scripts/app.js"></script>
+</body>
+</html>
